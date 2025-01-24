@@ -3,7 +3,7 @@ import axiosRetry from 'axios-retry';
 import Cookie from "universal-cookie";
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8000/api', 
+  baseURL: 'http://localhost:3000/', 
    withCredentials: true, 
 });
 

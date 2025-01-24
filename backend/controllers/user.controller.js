@@ -5,7 +5,7 @@ import { uploadToCloudinary } from "../utils/cloudinary.js";
 export const register = async (req, res) => {
   try {
     console.log({req : req.body})
-    const { name, email, password, skills, bio, address } = req.body;
+    const { name, email, password} = req.body;
 
     if(!name || !email || !password || !skills || !bio || !address) {
     return res.status(400).json({ message: "All fields are required." });
@@ -22,10 +22,7 @@ export const register = async (req, res) => {
     const user = new User({
       name,
       email,
-      password,
-      skills,
-      bio,
-      address,
+      password
     });
 
     // Save user to the database
